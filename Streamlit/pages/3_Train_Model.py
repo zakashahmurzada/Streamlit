@@ -38,6 +38,11 @@ if 'data' in st.session_state:
 
     elif option == 'KNN':
         if st.button('Train Now!'):
+            progress_text = "Model training in progress ..."
+            my_bar = st.sidebar.progress(0, text=progress_text)
+            for percent_complete in range(100):
+                time.sleep(0.01)
+                my_bar.progress(percent_complete + 1, text=progress_text)
             model = KNeighborsClassifier(n_neighbors=3)
             model.fit(x_train,y_train)
             st.session_state['model'] = model 
@@ -45,6 +50,11 @@ if 'data' in st.session_state:
 
     elif option == 'Decision Tree':
         if st.button('Train Now!'):
+            progress_text = "Model training in progress ..."
+            my_bar = st.sidebar.progress(0, text=progress_text)
+            for percent_complete in range(100):
+                time.sleep(0.01)
+                my_bar.progress(percent_complete + 1, text=progress_text)
             model = DecisionTreeClassifier()
             model.fit(x_train,y_train)
             st.session_state['model'] = model 

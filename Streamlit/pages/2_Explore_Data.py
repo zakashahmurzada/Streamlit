@@ -21,5 +21,5 @@ if 'data' in st.session_state:
 
     else:
         fig, ax = plt.subplots()
-        sns.heatmap(df.drop('Id', axis=1).corr())
+        sns.heatmap(df.drop(['Id', 'Species'], axis=1).corr())
         st.pyplot(fig)
