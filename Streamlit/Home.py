@@ -1,6 +1,6 @@
 import streamlit as st # pip install streamlit
 
-st.title('Welcome to Iris Classification')
+st.title('Welcome to Iris Classification') # this is where the intro will look like
 
 # Range input for n_neighbors
 # n_start, n_end = st.slider("Select Range for n_neighbors", min_value=1, max_value=10, value=(3, 7))
