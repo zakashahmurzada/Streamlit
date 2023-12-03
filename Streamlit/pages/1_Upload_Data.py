@@ -4,7 +4,7 @@ import pandas as pd
 st.title('Upload Iris Data')
 
 if 'data' in st.session_state:
-    st.info('Data is already uploaded!')
+    st.info('Data is already uploaded!')  # This is the process that happens after you uploaded file
     st.write(st.session_state['data'].head())
 
 else:
