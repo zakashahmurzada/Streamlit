@@ -24,7 +24,7 @@ if option is not None:
         #     count3 += 1
 
         if st.button('Calculate best parameter'):
-            clf = GridSearchCV(svm.SVC(gamma='auto'), {
+            clf = GridSearchCV(svm.SVC(gamma='auto'), {  #Hyperparameter tuning part
                 'C': [number1, number2, number3],
                 'kernel': ['rbf', 'linear']
             }, cv=5, return_train_score=False)
